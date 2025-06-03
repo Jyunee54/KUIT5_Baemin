@@ -1,0 +1,15 @@
+spring:
+  profiles:
+    active: dev # ← dev 환경 활성화
+
+secret:
+  jwt:
+    access:
+      key: ${ACCESS_TOKEN_KEY}
+      expired-in: 3600000
+    refresh:
+      key: ${REFRESH_TOKEN_KEY}
+      expired-in: 1209600000
+
+logging.level:
+  org.hibernate.SQL: debug #sql
